@@ -30,4 +30,8 @@ def start
   end
 end
 
-start
+if Dir.exist? ARGV[0]
+  start
+else
+  puts "Not a valid path:#{ARGV[0]}"
+end
